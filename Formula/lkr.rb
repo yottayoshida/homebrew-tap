@@ -1,8 +1,8 @@
 class Lkr < Formula
   desc "LLM Key Ring — manage LLM API keys via macOS Keychain"
   homepage "https://github.com/yottayoshida/llm-key-ring"
-  url "https://github.com/yottayoshida/llm-key-ring/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "40a590060b8cd0f277f806d5b085d9599a138d1e50ca40c9422f9c240e8feb76"
+  url "https://github.com/yottayoshida/llm-key-ring/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "a3a0045fd303de4a7d80c268229f1e8f5c51d0c57a447313d8bf930066e9121f"
   license "MIT"
 
   depends_on "rust" => :build
