@@ -1,0 +1,23 @@
+name: Homebrew Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    name: brew audit
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tap and audit all formulae
+        run: |
+          brew tap-new --no-git yottayoshida/tap
+          cp Formula/*.rb "$(brew --repository yottayoshida/tap)/Formula/"
+          for formula in Formula/*.rb; do
+            name=$(basename "$formula" .rb)
+            brew audit --new-formula "yottayoshida/tap/$name"
+          done
