@@ -19,5 +19,5 @@ jobs:
           cp Formula/*.rb "$(brew --repository yottayoshida/tap)/Formula/"
           for formula in Formula/*.rb; do
             name=$(basename "$formula" .rb)
-            brew audit --new-formula "yottayoshida/tap/$name"
+            brew audit --new "yottayoshida/tap/$name"
           done
