@@ -9,7 +9,7 @@ class Lkr < Formula
   depends_on :macos
 
   def install
-    system "cargo", "install", "--locked", *std_cargo_args(path: "crates/lkr-cli")
+    system "cargo", "install", *std_cargo_args(path: "crates/lkr-cli")
   end
 
   def caveats
