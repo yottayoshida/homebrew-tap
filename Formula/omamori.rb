@@ -1,8 +1,8 @@
 class Omamori < Formula
   desc "AI Agent's Omamori — protect your system from dangerous AI CLI commands"
   homepage "https://github.com/yottayoshida/omamori"
-  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "5b204164982857325207962bf3e62c9ee3f4c410700ff7695a6df6e7913fa9b6"
+  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "7a7ba5992ffd422e347ee2d052ecb0a335cc8d6d7b722fde0bf2d19fa86a8528"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "rust" => :build
@@ -20,15 +20,12 @@ class Omamori < Formula
       Then add the shim to your PATH (add to ~/.zshrc):
         export PATH="$HOME/.omamori/shim:$PATH"
 
-      And add the Claude Code hook to ~/.claude/settings.json:
-        cat ~/.omamori/hooks/claude-settings.snippet.json
-
-      Verify with:
-        omamori test
+      That's it! install auto-creates config and verifies rules.
 
       To customize rules:
-        omamori init > ~/.config/omamori/config.toml
-        chmod 600 ~/.config/omamori/config.toml
+        omamori config list                        # show current rules
+        omamori config disable git-push-force-block # disable a rule
+        omamori config enable git-push-force-block  # re-enable
     EOS
   end
 
