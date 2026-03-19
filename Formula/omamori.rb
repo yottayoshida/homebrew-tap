@@ -1,8 +1,8 @@
 class Omamori < Formula
   desc "AI Agent's Omamori — protect your system from dangerous AI CLI commands"
   homepage "https://github.com/yottayoshida/omamori"
-  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "c27022ecc7ba3e215e20c0e06ecb93b1b4527ff5b26ff209c6217a42018cad81"
+  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "1732426ddb056dfede600d45f82b3d3972e46ff7798355eb3370d04867e6d082"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "rust" => :build
@@ -21,6 +21,8 @@ class Omamori < Formula
         export PATH="$HOME/.omamori/shim:$PATH"
 
       That's it! install auto-creates config and verifies rules.
+
+      After `brew upgrade`, hooks are auto-updated on next command.
 
       To customize rules:
         omamori config list                        # show current rules
