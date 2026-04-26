@@ -1,8 +1,8 @@
 class Omamori < Formula
   desc "AI Agent's Omamori — protect your system from dangerous AI CLI commands"
   homepage "https://github.com/yottayoshida/omamori"
-  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.9.5.tar.gz"
-  sha256 "d564e239ed21f38943256e391a016d27cf8053a2ce1cfc36996aaea693d1c125"
+  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.9.6.tar.gz"
+  sha256 "de600d6c8d1cc93053c2a068e3ca54f9f7809d34237302a29883ad96903cb4b1"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "rust" => :build
