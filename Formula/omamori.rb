@@ -1,8 +1,8 @@
 class Omamori < Formula
   desc "AI Agent's Omamori — protect your system from dangerous AI CLI commands"
   homepage "https://github.com/yottayoshida/omamori"
-  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.10.13.tar.gz"
-  sha256 "fdf77d1740ad63a19689da37484b8024f41ae92dfdb68aa3cf93ea243a4ba808"
+  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.10.14.tar.gz"
+  sha256 "d01401305916ab396a62a26154775b5540c9f51926c32d6ae416bb9ab38f3be9"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "rust" => :build
@@ -33,6 +33,6 @@ class Omamori < Formula
   end
 
   test do
-    assert_match "omamori usage", shell_output("#{bin}/omamori help")
+    assert_match "AI tool safety guard", shell_output("#{bin}/omamori help")
   end
 end
