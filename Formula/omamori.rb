@@ -1,8 +1,8 @@
 class Omamori < Formula
   desc "AI Agent's Omamori — protect your system from dangerous AI CLI commands"
   homepage "https://github.com/yottayoshida/omamori"
-  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.10.14.tar.gz"
-  sha256 "d01401305916ab396a62a26154775b5540c9f51926c32d6ae416bb9ab38f3be9"
+  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "e7829876e974aed7ecb2f9d40c9853f5cde947871cc862fdfadf42918190f62b"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "rust" => :build
@@ -14,16 +14,11 @@ class Omamori < Formula
 
   def caveats
     <<~EOS
-      To activate omamori, run:
-        omamori install --hooks
+      One-command setup (installs shims, hooks, and shell PATH):
+        omamori setup
 
-      Then add the shim to your PATH (add to ~/.zshrc):
-        export PATH="$HOME/.omamori/shim:$PATH"
-
-      That's it! install auto-creates config and verifies rules.
-
-      After `brew upgrade`, Claude Code hooks auto-update on next command.
-      Cursor users: re-merge ~/.omamori/hooks/cursor-hooks.snippet.json
+      After `brew upgrade`, re-run `omamori setup` to update shims.
+      Claude Code hooks auto-update on next command.
 
       To customize rules:
         omamori config list                        # show current rules
