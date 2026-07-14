@@ -1,8 +1,8 @@
 class Omamori < Formula
   desc "AI Agent's Omamori — protect your system from dangerous AI CLI commands"
   homepage "https://github.com/yottayoshida/omamori"
-  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.12.5.tar.gz"
-  sha256 "307418930a942876f5566085081afd58ed45a440079bf9b490e3c3595ce8b144"
+  url "https://github.com/yottayoshida/omamori/archive/refs/tags/v0.12.6.tar.gz"
+  sha256 "3c9a38b245506261fe50121bb7831c01705464b5eef314f3c659e3246c87240c"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on "rust" => :build
@@ -21,9 +21,10 @@ class Omamori < Formula
       Claude Code hooks auto-update on next command.
 
       To customize rules:
-        omamori config list                        # show current rules
-        omamori config disable git-push-force-block # disable a rule
-        omamori config enable git-push-force-block  # re-enable
+        omamori config list                          # show current rules
+        omamori config add my-rule --command rm --action block --match-any -rf  # scaffold a custom rule
+        omamori config disable my-rule                 # disable it
+        omamori override disable git-push-force-block  # disable a built-in (core rules use override)
     EOS
   end
 
