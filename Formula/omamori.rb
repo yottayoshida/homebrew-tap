@@ -17,7 +17,8 @@ class Omamori < Formula
       One-command setup (installs shims, hooks, and shell PATH):
         omamori setup
 
-      After `brew upgrade`, re-run `omamori setup` to update shims.
+      After `brew upgrade`, re-run `omamori install --hooks` to regenerate shims
+      and hooks for the new version, then `omamori doctor` to confirm.
       Claude Code hooks auto-update on next command.
 
       To customize rules:
