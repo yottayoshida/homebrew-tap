@@ -14,19 +14,19 @@ class Sideeye < Formula
     depends_on arch: :arm64
 
     on_arm do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.7.0/sideeye-v1.7.0-aarch64-macos.tar.gz"
-      sha256 "5e832e327e9031e702e27504b9e5115702399ae912950b862a311a2ffad2b6e3"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.8.0/sideeye-v1.8.0-aarch64-macos.tar.gz"
+      sha256 "a90235052d5e7fa3c759c559a00457529368414624fd791a2afeb3460832ae22"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.7.0/sideeye-v1.7.0-x86_64-linux.tar.gz"
-      sha256 "0c547279c9c04432929c5e51cd19688c97522d60d938c3e347ae62ea2074bac6"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.8.0/sideeye-v1.8.0-x86_64-linux.tar.gz"
+      sha256 "fcb270fea9d6b8df4c31d38cba51bbda00c7dd35da0dbd112c2b3d00af002588"
     end
     on_arm do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.7.0/sideeye-v1.7.0-aarch64-linux.tar.gz"
-      sha256 "796a47ce7d7803df5b15176787cc285f7cf89fd0df910502c8fd7e75309e8f61"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.8.0/sideeye-v1.8.0-aarch64-linux.tar.gz"
+      sha256 "5beb75a8d323dab5daa7974e74541eb8b02398a466cd0609f21d2cb624f14308"
     end
   end
 
