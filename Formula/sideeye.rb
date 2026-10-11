@@ -14,19 +14,19 @@ class Sideeye < Formula
     depends_on arch: :arm64
 
     on_arm do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.10.0/sideeye-v1.10.0-aarch64-macos.tar.gz"
-      sha256 "341230cff57f9c6a3be5430053572876054f290207941b0e164be4c232319cbb"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.11.0/sideeye-v1.11.0-aarch64-macos.tar.gz"
+      sha256 "242628bf9ced47bb5d7e7237d4dabae9802df4cb4675df844fca482352980716"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.10.0/sideeye-v1.10.0-x86_64-linux.tar.gz"
-      sha256 "1edc377b5bf3f64429523dd6cdf0ef248bad9c3704c62d6766879b589b7c2496"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.11.0/sideeye-v1.11.0-x86_64-linux.tar.gz"
+      sha256 "1526560102e60cd1f8eed2c2050d98cd84f8af2b49f3a63735e00b1d6e160e64"
     end
     on_arm do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.10.0/sideeye-v1.10.0-aarch64-linux.tar.gz"
-      sha256 "cb176c41df10611ec6eb2c255bf5d7f557edfb4159752e7f89959519c3c6a99a"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.11.0/sideeye-v1.11.0-aarch64-linux.tar.gz"
+      sha256 "93c5e41a4c6eee12266fd6ecb15302f77147d9c93e5f45e7d00e76be08909d2a"
     end
   end
 
@@ -49,9 +49,8 @@ class Sideeye < Formula
       Check the install with:
         sideeye demo
 
-      demo compiles a small planted-bug tool (it needs a C compiler) and
-      explores it, so it exits 1 on success: finding the planted bug is the
-      expected result.
+      demo explores a small planted-bug tool carried inside sideeye, so it
+      exits 1 on success: finding the planted bug is the expected result.
     EOS
   end
 
