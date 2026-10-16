@@ -4,7 +4,7 @@ class Sideeye < Formula
   license any_of: ["MIT", "Apache-2.0"]
 
   # Ships the released build rather than compiling from source. The project
-  # pins Zig 0.16.0 and has been broken by Zig releases before, so a
+  # pins Zig 0.17.0 and has been broken by Zig releases before, so a
   # `depends_on "zig" => :build` formula would break whenever Homebrew's zig
   # moves ahead of the pin. The release already publishes the three targets
   # below, so this costs no new build work and installs in seconds.
@@ -14,19 +14,19 @@ class Sideeye < Formula
     depends_on arch: :arm64
 
     on_arm do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.13.0/sideeye-v1.13.0-aarch64-macos.tar.gz"
-      sha256 "bec94bf6d1b5beb49cb72ded4efcaa99f4f6e418514f33f9806544ae0f40fcb1"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.14.0/sideeye-v1.14.0-aarch64-macos.tar.gz"
+      sha256 "1ac306dc72f8c946280faedd1c7ed690a3f43898f080f3f64a5bdab26e0a3202"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.13.0/sideeye-v1.13.0-x86_64-linux.tar.gz"
-      sha256 "e2aaf8b5fcba752edca019a8a9503095bcea6bfeb582b4e7a1a702324e4e798f"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.14.0/sideeye-v1.14.0-x86_64-linux.tar.gz"
+      sha256 "910e793edea575cdc05e2d513c5ca819eecd25f649a29b460e7e1ccf2bcbee24"
     end
     on_arm do
-      url "https://github.com/yottayoshida/sideeye/releases/download/v1.13.0/sideeye-v1.13.0-aarch64-linux.tar.gz"
-      sha256 "93046775f9f5e28f6f6716730aaa3cbab8fa1916c1f41ff0afc73b7cc1ed2e06"
+      url "https://github.com/yottayoshida/sideeye/releases/download/v1.14.0/sideeye-v1.14.0-aarch64-linux.tar.gz"
+      sha256 "ee7982013c2108e3932af0ae148dc129d6c956f687bc97df00013260c3a467b8"
     end
   end
 
